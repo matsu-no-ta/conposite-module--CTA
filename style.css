@@ -1,0 +1,323 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+    /* --color-font-base: #333; */
+    --color-font-white: #fefefe;
+    --color-font-blue: #042274;
+    --color-border-white: #fefefe;
+    --color-bg-white: #fefefe;
+    --color-bg-blue: #042274;
+}
+
+/*!
+global > content-width
+------------------------------
+*/
+:root {
+    --width-content: 960px;
+}
+
+/*!
+global > font
+------------------------------
+*/
+:root {
+    --font-family-base: "Noto Sans JP", sans-serif;
+}
+
+/*!
+foundation > reset
+------------------------------
+*/
+html {
+    color: #000;
+    background: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: "";
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select,
+button {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-size: 100%;
+    border-radius: 0;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: inherit;
+}
+
+input,
+textarea,
+select {
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    display: block;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+legend {
+    color: #000;
+}
+
+main {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+svg {
+    display: block;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*!
+foundation > base
+------------------------------
+*/
+body {
+    line-height: 1.8;
+    /* letter-spacing: .06em; */
+    font-size: 14px;
+    color: var(--color-font-base);
+    font-family: var(--font-family-base);
+}
+@media screen and (min-width: 768px) {
+body {
+    font-size: 16px;
+}
+}
+
+/*!
+utility > utility
+------------------------------
+*/
+.u-visually-hidden {
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    margin: -1px !important;
+}
+
+/*!
+layout > container
+------------------------------
+*/
+.l-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: var(--width-content);
+}
+
+body {
+    margin: 40px auto;
+}
+
+/*!
+cta-area
+------------------------------
+*/
+.cta-area {
+    padding: 36px;
+    background-color: var(--color-bg-blue);
+    color: var(--color-font-white);
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-area-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+    .cta-area-title {
+        font-size: 20px;
+    }
+}
+
+.cta-area-text {
+    font-size: 12px;
+    margin-top: 16px;
+}
+@media screen and (min-width: 568px) {
+    .cta-area-text {
+        font-size: 14px;
+    }
+}
+
+.cta-area-contact {
+    margin-top: 24px;
+}
+
+.cta-area-button {
+    display: inline-block;
+    width: 100%;
+    max-width: 260px;
+    position: relative;
+    padding: 16px 32px 16px 16px;
+    background-color: var(--color-bg-blue);
+    border: 2px solid var(--color-border-white);
+    border-radius: 8px;
+    color: var(--color-font-white);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: .25s;
+    line-height: 1;
+}
+
+.cta-area-button::after {
+    content: '\f105';
+    position: absolute;
+    top: 36%;
+    right: 14px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.cta-area-button:focus,
+.cta-area-button:hover {
+    background-color: var(--color-bg-white);
+    border-color: currentColor;
+    color: var(--color-font-blue);
+}
+
+.before-icon-button::before {
+    content: '\f0e0';
+    display: inline-block;
+    margin-right: 5px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
